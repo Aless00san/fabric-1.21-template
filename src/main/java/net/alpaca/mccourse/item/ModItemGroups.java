@@ -1,8 +1,8 @@
 package net.alpaca.mccourse.item;
 
 import net.alpaca.mccourse.MCCourseMod;
+import net.alpaca.mccourse.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -22,8 +22,11 @@ public class ModItemGroups {
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MCCourseMod.MOD_ID, "fluorite_blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.fluorite_blocks"))
-                    .icon(() -> new ItemStack(ModItems.RAW_FLUORITE)).entries((displayContext, entries) ->
-                            entries.add(Blocks.AMETHYST_BLOCK)).build());
+                    .icon(() -> new ItemStack(ModBlocks.FLUORITE_BLOCK)).entries((displayContext, entries) -> {
+                            entries.add(ModBlocks.FLUORITE_BLOCK);
+                            entries.add(ModBlocks.FLUORITE_ORE);
+                            entries.add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+                    }).build());
 
     public static void registerItemGroups() {
         MCCourseMod.LOGGER.info("registering Mod item groups");

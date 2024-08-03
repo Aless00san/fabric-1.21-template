@@ -1,5 +1,6 @@
 package net.alpaca.mccourse;
 
+import net.alpaca.mccourse.block.ModBlocks;
 import net.alpaca.mccourse.item.ModItemGroups;
 import net.alpaca.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -16,5 +17,6 @@ public class MCCourseMod implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
