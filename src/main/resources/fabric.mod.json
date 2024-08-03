@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "coursemod",
+	"id": "mccourse",
 	"version": "${version}",
 	"name": "CourseMod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -12,17 +12,17 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/coursemod/icon.png",
+	"icon": "assets/mccourse/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.alpaca.course.CourseMod"
+			"net.alpaca.mccourse.MCCourseMod"
 		],
 		"fabric-datagen": [
-			"net.alpaca.course.CourseModDataGenerator"
+			"net.alpaca.mccourse.MCCourseModDataGenerator"
 		],
 		"client": [
-			"net.alpaca.course.CourseModClient"
+			"net.alpaca.mccourse.MCCourseModClient"
 		]
 	},
 	"mixins": [

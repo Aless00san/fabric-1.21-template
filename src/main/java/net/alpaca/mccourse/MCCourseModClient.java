@@ -1,8 +1,8 @@
-package net.alpaca.course;
+package net.alpaca.mccourse;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class CourseModClient implements ClientModInitializer {
+public class MCCourseModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
