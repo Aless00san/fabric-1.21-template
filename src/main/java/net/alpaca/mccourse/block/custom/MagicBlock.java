@@ -1,13 +1,13 @@
 package net.alpaca.mccourse.block.custom;
 
 import net.alpaca.mccourse.item.ModItems;
+import net.alpaca.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -31,12 +31,12 @@ public class MagicBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity item)
             if(isValidItem(item.getStack())) {
-                item.setStack(new ItemStack(Items.DIAMOND, item.getStack().getCount()));
+                item.setStack(new ItemStack(ModItems.STARLIGHT_ASHES, item.getStack().getCount()));
             }
         super.onSteppedOn(world, pos, state, entity);
     }
 
     private boolean isValidItem(ItemStack stack) {
-        return stack.getItem() == ModItems.FLUORITE || stack.getItem() == ModItems.RAW_FLUORITE || stack.getItem() == Items.COAL;
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }
