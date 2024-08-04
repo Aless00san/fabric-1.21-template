@@ -1,6 +1,7 @@
 package net.alpaca.mccourse.block;
 
 import net.alpaca.mccourse.MCCourseMod;
+import net.alpaca.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -33,6 +34,10 @@ public class ModBlocks {
     public static final Block FLUORITE_END_ORE = registerBlock("fluorite_end_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,6),
                     AbstractBlock.Settings.create().strength(6f).requiresTool()));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().
+                    strength(2f)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

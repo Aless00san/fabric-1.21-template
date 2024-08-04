@@ -1,6 +1,7 @@
 package net.alpaca.mccourse.item;
 
 import net.alpaca.mccourse.MCCourseMod;
+import net.alpaca.mccourse.item.custom.ChainsawItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -10,12 +11,19 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item FLUORITE = reigsterItem("fluorite",
-            new Item(new Item.Settings()));
-    public static final Item RAW_FLUORITE = reigsterItem("raw_fluorite",
+    public static final Item FLUORITE = registerItem("fluorite",
             new Item(new Item.Settings()));
 
-    private static Item reigsterItem(String name, Item item) {
+    public static final Item RAW_FLUORITE = registerItem("raw_fluorite",
+            new Item(new Item.Settings()));
+
+    public static final Item CHAINSAW = registerItem("chainsaw",
+            new ChainsawItem(new Item.Settings().maxDamage(32)));
+
+    public static final Item STRAWBERRY = registerItem("strawberry",
+            new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
+
+    private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
 
