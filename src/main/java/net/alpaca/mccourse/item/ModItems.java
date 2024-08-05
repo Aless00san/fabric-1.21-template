@@ -2,6 +2,7 @@ package net.alpaca.mccourse.item;
 
 import net.alpaca.mccourse.MCCourseMod;
 import net.alpaca.mccourse.item.custom.ChainsawItem;
+import net.alpaca.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -44,6 +45,10 @@ public class ModItems {
     public static final Item FLUORITE_HOE = registerItem("fluorite_hoe",
             new HoeItem(ModToolMaterials.FLUORITE,
                     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 0, -3f))));
+
+    public static final Item FLUORITE_PAXEL = registerItem("fluorite_paxel",
+            new PaxelItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 4.5f, -2.4f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
