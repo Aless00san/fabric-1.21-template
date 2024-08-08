@@ -11,6 +11,16 @@
   "item.mccourse.fluorite_hoe": "Fluorite Hoe",
   "item.mccourse.fluorite_shovel": "Fluorite Shovel",
   "item.mccourse.fluorite_paxel": "Fluorite Paxel",
+  "item.mccourse.fluorite_hammer": "Fluorite Hammer",
+
+  "item.mccourse.fluorite_helmet": "Fluorite Helmet",
+  "item.mccourse.fluorite_chestplate": "Fluorite Chestplate",
+  "item.mccourse.fluorite_leggings": "Fluorite Leggings",
+  "item.mccourse.fluorite_boots": "Fluorite Boots",
+
+  "item.mccourse.fluorite_bow": "Fluorite Bow",
+  "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.metal_detector": "Metal Detector",
 
   "block.mccourse.fluorite_block": "Fluorite Block",
   "block.mccourse.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
@@ -27,9 +37,12 @@
   "block.mccourse.fluorite_wall": "Fluorite Wall",
   "block.mccourse.fluorite_door": "Fluorite Door",
   "block.mccourse.fluorite_trapdoor": "Fluorite Trapdoor",
+  "block.mccourse.fluorite_lamp": "Fluorite Lamp",
 
   "itemgroup.fluorite": "Fluorite Items",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
+
+  "item.mccourse.metal_detector.no_valuables": "No Valuables Found!",
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §2Shift§r for showing more information",
   "tooltip.mccourse.chainsaw.tooltip.1": "This chainsaw will cut trees really fast!",

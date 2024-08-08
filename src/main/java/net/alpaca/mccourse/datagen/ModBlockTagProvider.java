@@ -22,7 +22,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.FLUORITE_ORE,
                         ModBlocks.FLUORITE_DEEPSLATE_ORE,
                         ModBlocks.FLUORITE_NETHER_ORE,
-                        ModBlocks.FLUORITE_END_ORE);
+                        ModBlocks.FLUORITE_END_ORE,
+                        ModBlocks.FLUORITE_FENCE,
+                        ModBlocks.FLUORITE_WALL,
+                        ModBlocks.FLUORITE_FENCE_GATE,
+                        ModBlocks.FLUORITE_STAIRS,
+                        ModBlocks.FLUORITE_SLAB);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FLUORITE_END_ORE,

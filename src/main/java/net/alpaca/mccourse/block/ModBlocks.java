@@ -1,6 +1,7 @@
 package net.alpaca.mccourse.block;
 
 import net.alpaca.mccourse.MCCourseMod;
+import net.alpaca.mccourse.block.custom.FluoriteLampBlock;
 import net.alpaca.mccourse.block.custom.MagicBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -64,6 +65,10 @@ public class ModBlocks {
 
     public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().nonOpaque()));
+
+    public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
+            new FluoriteLampBlock(AbstractBlock.Settings.create().
+                    sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> state.get(FluoriteLampBlock.CLICKED) ? 15 : 0)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

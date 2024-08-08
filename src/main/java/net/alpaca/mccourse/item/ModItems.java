@@ -1,10 +1,10 @@
 package net.alpaca.mccourse.item;
 
 import net.alpaca.mccourse.MCCourseMod;
-import net.alpaca.mccourse.item.custom.ChainsawItem;
-import net.alpaca.mccourse.item.custom.PaxelItem;
+import net.alpaca.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -27,8 +27,8 @@ public class ModItems {
             new Item(new Item.Settings()));
 
     public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
-            new SwordItem(ModToolMaterials.FLUORITE,
-                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f))));
+            new ModEffectSwordItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f)), StatusEffects.POISON));
 
     public static final Item FLUORITE_PICKAXE = registerItem("fluorite_pickaxe",
             new PickaxeItem(ModToolMaterials.FLUORITE,
@@ -49,6 +49,32 @@ public class ModItems {
     public static final Item FLUORITE_PAXEL = registerItem("fluorite_paxel",
             new PaxelItem(ModToolMaterials.FLUORITE,
                     new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 4.5f, -2.4f))));
+
+    public static final Item FLUORITE_HAMMER = registerItem("fluorite_hammer",
+            new HammerItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 8f, -3.5f))));
+
+    public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+
+    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+
+    public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+
+    public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+
+    public static final Item FLUORITE_BOW = registerItem("fluorite_bow",
+            new BowItem(new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f))));
+
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new Item.Settings().maxDamage(200)));
+    public static final Item DATA_TABLET = registerItem("data_tablet", new DataTabletItem(new Item.Settings().maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);

@@ -27,6 +27,16 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_PICKAXE);
                         entries.add(ModItems.FLUORITE_HOE);
                         entries.add(ModItems.FLUORITE_PAXEL);
+                        entries.add(ModItems.FLUORITE_HAMMER);
+
+                        entries.add(ModItems.FLUORITE_HELMET);
+                        entries.add(ModItems.FLUORITE_CHESTPLATE);
+                        entries.add(ModItems.FLUORITE_LEGGINGS);
+                        entries.add(ModItems.FLUORITE_BOOTS);
+                        entries.add(ModItems.FLUORITE_BOW);
+
+                        entries.add(ModItems.DATA_TABLET);
+                        entries.add(ModItems.METAL_DETECTOR);
                     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -52,6 +62,7 @@ public class ModItemGroups {
                             entries.add(ModBlocks.FLUORITE_WALL);
                             entries.add(ModBlocks.FLUORITE_DOOR);
                             entries.add(ModBlocks.FLUORITE_TRAPDOOR);
+                            entries.add(ModBlocks.FLUORITE_LAMP);
                     }).build());
 
     public static void registerItemGroups() {
