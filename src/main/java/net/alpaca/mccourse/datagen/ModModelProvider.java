@@ -62,6 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLUORITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLUORITE_BOOTS, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.SPONGE_BALL, Models.GENERATED);
+
         //itemModelGenerator.register(ModItems.FLUORITE_BOW, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
